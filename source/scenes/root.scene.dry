@@ -33,7 +33,7 @@ Q.historical_mode = 0;
 Q.old_demographics = 0;
 
 // party resources
-Q.resources = 2;
+Q.resources = 100;
 // party dues
 Q.dues = 2;
 
@@ -154,7 +154,7 @@ Q.prussian_police_loyalty = 0.5;
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
 Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.reichswehr_loyalty = 1;
 
 // The state of the country
 
@@ -187,7 +187,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 5;
+Q.budget = 100;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
