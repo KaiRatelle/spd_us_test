@@ -1,4 +1,6 @@
 # Social Democracy: An Alternate History
+## Original Game
+[Social Democracy](https://red-autumn.itch.io/social-democracy/)
 
 ## Included Libraries
 
