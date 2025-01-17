@@ -575,6 +575,7 @@ For more information on the politics and government of the German Republic, see 
 - @1928_main: Begin (Normal Relations)
 - @1928_hard: Begin (Terrible Relations)
 - @1928_historical: Begin (Historical Mode)
+- @settings: Settings
 
 @1928_easy
 on-arrival: difficulty = -1; dues = 29; rb_strength = 2000; kpd_relation = 90; z_relation = 90; dvp_relation = 90; ddp_relation = 90;
@@ -601,6 +602,37 @@ Q.dvp_relation = 31;
 this.state.disableSaves = true;
 !}
 go-to: 1928_main
+
+@settings
+subtitle: Enable or disable various features
+
+For other, non-difficulty related tweaks.
+
+- @disable_end: Disable end in 1934
+- @enable_end: Enable end in 1934
+- @menu: Back
+
+@disable_end
+view-if: end_disabled != 1
+on-arrival: end_disabled = 1
+go-to: menu
+
+The end date has been disabled.
+
+@enable_end
+view-if: end_disabled = 1
+on-arrival: end_disabled = 0
+go-to: menu
+
+The end date has been disabled.
+
+@menu
+
+- @1928_easy: Begin (High Relations (Excluding NSDAP and DNVP))
+- @1928_main: Begin (Normal Relations)
+- @1928_hard: Begin (Terrible Relations)
+- @1928_historical: Begin (Historical Mode)
+- @settings: Settings
 
 @1928_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3
