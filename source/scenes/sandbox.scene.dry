@@ -1,6 +1,7 @@
 title: sandbox
 new-page: true
 is-special: true
+is-hand: true
 go-to: sandbox_menu
 
 = Sandbox Menu
