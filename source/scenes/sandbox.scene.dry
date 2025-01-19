@@ -14,14 +14,7 @@ go-to: sandbox_menu
 - @subtract10resources: Subtract 10 Resources
 - @subtract20resources: Subtract 20 Resources
 - @subtract100resources: Subtract 100 Resources
-- @add5leftdissent: Add 5 Left Dissent
-- @100leftdissent: Maximum Left Dissent
-- @subtract5leftdissent: Remove 5 Left Dissent
-- @removeleftdissent: Remove All Left Dissent
-- @add5leftstrength: Add 5 Left Strength
-- @100leftstrength: Maximum Left Strength
-- @subtract5leftstrength: Remove 5 Left Strength
-- @removeleftstrength: Remove Left Strength
+- @editleft: Edit Left Faction Of SPD
 
 @add10resources
 go-to: sandbox_menu
@@ -71,8 +64,20 @@ Q.resources -= 100;
 
 Removed 100 resources from the party's stockpile. This doesn't go to the homeless or anything, why would you do this?
 
+@editleft
+
+- @add5leftdissent: Add 5 Left Dissent
+- @100leftdissent: Maximum Left Dissent
+- @subtract5leftdissent: Remove 5 Left Dissent
+- @removeleftdissent: Remove All Left Dissent
+- @add5leftstrength: Add 5 Left Strength
+- @100leftstrength: Maximum Left Strength
+- @subtract5leftstrength: Remove 5 Left Strength
+- @removeleftstrength: Remove Left Strength
+- @returnsandbox: Return To Sandbox Menu
+
 @add5leftdissent
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_dissent += 5;
 !}
@@ -80,7 +85,7 @@ Q.left_dissent += 5;
 Added 5 left dissent.
 
 @100leftdissent
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_dissent = 100;
 !}
@@ -88,7 +93,7 @@ Q.left_dissent = 100;
 Maximised left dissent.
 
 @subtract5leftdissent
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_dissent -= 5;
 !}
@@ -96,7 +101,7 @@ Q.left_dissent -= 5;
 Reduced left dissent by 5.
 
 @removeleftdissent
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_dissent = 0;
 !}
@@ -104,7 +109,7 @@ Q.left_dissent = 0;
 Removed all left dissent.
 
 @add5leftstrength
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_strength += 5;
 !}
@@ -112,7 +117,7 @@ Q.left_strength += 5;
 Added 5 left strength.
 
 @100leftstrength
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_strength = 100;
 !}
@@ -120,7 +125,7 @@ Q.left_strength = 100;
 Maximised left strength.
 
 @subtract5leftstrength
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_strength -= 5;
 !}
@@ -128,9 +133,12 @@ Q.left_strength -= 5;
 Reduced left strength by 5.
 
 @removeleftstrength
-go-to: sandbox_menu
+go-to: editleft
 on-arrival: {!
 Q.left_strength = 0;
 !}
 
 Removed all left strength.
+
+@returnsandbox
+go-to: sandbox_menu
