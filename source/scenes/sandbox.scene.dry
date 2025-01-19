@@ -6,6 +6,8 @@ go-to: sandbox_menu
 
 = Sandbox Menu
 
+//If you are trying to add this to another mod, make sure to take the sandbox button from out/html/index.html and the sandbox button function from out/html/game.js
+
 @sandbox_menu
 
 - @add10resources: Add 10 Resources
@@ -374,6 +376,7 @@ Removed all reformist strength.
 
 @editneorevisionist
 
+- @discoverneorevisionism: Discover Neorevisionism
 - @add5neorevisionistdissent: Add 5 Neorevisionist Dissent
 - @100neorevisionistdissent: Maximum Neorevisionist Dissent
 - @subtract5neorevisionistdissent: Remove 5 Neorevisionist Dissent
@@ -383,6 +386,13 @@ Removed all reformist strength.
 - @subtract5neorevisioniststrength: Remove 5 Neorevisionist Strength
 - @removeneorevisioniststrength: Remove Neorevisionist Strength
 - @returnsandbox: Return To Sandbox Menu
+
+@discoverneorevisionism
+go-to: editneorevisionist
+view-if: Q.neorevisionism == 0;
+on-arrival: {!
+Q.neorevisionism = 1;
+!}
 
 @add5neorevisionistdissent
 go-to: editneorevisionist
