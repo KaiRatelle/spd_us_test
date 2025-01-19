@@ -14,10 +14,14 @@ go-to: sandbox_menu
 - @subtract10resources: Subtract 10 Resources
 - @subtract20resources: Subtract 20 Resources
 - @subtract100resources: Subtract 100 Resources
-- @add5dissent: Add 5 Party Dissent
-- @100dissent: Maximum Party Dissent
-- @subtract5dissent: Remove 5 Part Dissent
-- @removedissent: Remove All Party Dissent
+- @add5leftdissent: Add 5 Left Dissent
+- @100leftdissent: Maximum Left Dissent
+- @subtract5leftdissent: Remove 5 Left Dissent
+- @removeleftdissent: Remove All Left Dissent
+- @add5leftstrength: Add 5 Left Strength
+- @100leftstength: Maximum Left Strength
+- @subract5leftstrength: Remove 5 Left Strength
+- @removeleftstrength: Remove Left Strength
 
 @add10resources
 go-to: sandbox_menu
@@ -67,38 +71,66 @@ Q.resources -= 100;
 
 Removed 100 resources from the party's stockpile. This doesn't go to the homeless or anything, why would you do this?
 
-@add5dissent
+@add5leftdissent
 go-to: sandbox_menu
 on-arrival: {!
-Q.dissent += 0.05;
-Q.dissent_percent += 5;
+Q.left_dissent += 5;
 !}
 
-Added 5 party dissent.
+Added 5 left dissent.
 
-@100dissent
+@100leftdissent
 go-to: sandbox_menu
 on-arrival: {!
-Q.dissent = 1;
-Q.dissent_percent = 100;
+Q.left_dissent = 100;
 !}
 
-Maximised party dissent.
+Maximised left dissent.
 
-@subtract5dissent
+@subtract5leftdissent
 go-to: sandbox_menu
 on-arrival: {!
-Q.dissent -= 0.05;
-Q.dissent_percent -= 5;
+Q.left_dissent -= 5;
 !}
 
-Reduced party dissent by 5.
+Reduced left dissent by 5.
 
-@removedissent
+@removeleftdissent
 go-to: sandbox_menu
 on-arrival: {!
-Q.dissent = 0;
-Q.dissent_percent = 0;
+Q.left_dissent = 0;
 !}
 
-Removed all party dissent.
+Removed all left dissent.
+
+@add5leftstrength
+go-to: sandbox_menu
+on-arrival: {!
+Q.left_strength += 5;
+!}
+
+Added 5 left strength.
+
+@100leftstrength
+go-to: sandbox_menu
+on-arrival: {!
+Q.left_strength = 100;
+!}
+
+Maximised left strength.
+
+@subtract5leftstrength
+go-to: sandbox_menu
+on-arrival: {!
+Q.left_strength -= 5;
+!}
+
+Reduced left strength by 5.
+
+@removeleftstrength
+go-to: sandbox_menu
+on-arrival: {!
+Q.left_strength = 0;
+!}
+
+Removed all left strength.
