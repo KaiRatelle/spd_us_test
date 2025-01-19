@@ -8,18 +8,24 @@ go-to: sandbox_menu
 
 @sandbox_menu
 
-- @add10resources: Add 10 Resources
-- @add20resources: Add 20 Resources
-- @add100resources: Add 100 Resources
-- @subtract10resources: Subtract 10 Resources
-- @subtract20resources: Subtract 20 Resources
-- @subtract100resources: Subtract 100 Resources
+- @editresources: Edit Resources
+- @editbudget: Edit Budget
 - @editleft: Edit Left Faction Of SPD
 - @editcenter: Edit Center Faction of SPD
 - @editlabor: Edit Labor Faction of SPD
 - @editreformist: Edit Reformist Faction of SPD
 - @editneorevisionist: Edit Neorevisionist Faction of SPD
 - @editironfront: Edit Iron Front
+
+@editresources
+
+- @add10resources: Add 10 Resources
+- @add20resources: Add 20 Resources
+- @add100resources: Add 100 Resources
+- @subtract10resources: Subtract 10 Resources
+- @subtract20resources: Subtract 20 Resources
+- @subtract100resources: Subtract 100 Resources
+- @returnsandbox: Return To Sandbox
 
 @add10resources
 go-to: sandbox_menu
@@ -68,6 +74,64 @@ Q.resources -= 100;
 !}
 
 Removed 100 resources from the party's stockpile. This doesn't go to the homeless or anything, why would you do this?
+
+@editbudget
+
+- @add10budget: Add 10 Budget
+- @add20budget: Add 20 Budget
+- @add100budget: Add 100 Budget
+- @subtract10budget: Subtract 10 Budget
+- @subtract20budget: Subtract 20 Budget
+- @subtract100budget: Subtract 100 Budget
+- @returnsandbox: Return To Sandbox
+
+@add10budget
+go-to: sandbox_menu
+on-arrival: {!
+Q.budget += 10;
+!}
+
+Added 10 budget to the country's stockpile.
+
+@add20budget
+go-to: sandbox_menu
+on-arrival: {!
+Q.budget += 20;
+!}
+
+Added 20 budget to the country's stockpile.
+
+@add100budget
+go-to: sandbox_menu
+on-arrival: {!
+Q.budget += 100;
+!}
+
+Added 100 budget to the country's stockpile, stop being greedy.
+
+@subtract10budget
+go-to: sandbox_menu
+on-arrival: {!
+Q.budget -= 10;
+!}
+
+Removed 10 budget from the country's stockpile.
+
+@subtract20budget
+go-to: sandbox_menu
+on-arrival: {!
+Q.budget -= 20;
+!}
+
+Removed 20 budget from the country's stockpile.
+
+@subtract100budget
+go-to: sandbox_menu
+on-arrival: {!
+Q.budget -= 100;
+!}
+
+Removed 100 budget from the country's stockpile. This doesn't go to the homeless or anything, why would you do this?
 
 @editleft
 
