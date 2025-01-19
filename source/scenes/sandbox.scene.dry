@@ -8,8 +8,10 @@ go-to: sandbox_menu
 
 @sandbox_menu
 
-- @add_resources: Add Resources
+- @add_resources: Add 10 Resources
 
 @add_resources
+on-arrival: {!
+Q.resources += 10;
+!}
 
-#Hello
