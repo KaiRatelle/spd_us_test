@@ -699,8 +699,6 @@ Lowered nazi urgency.
 - @unbanrfb: Unban RFB
 - @returnsandbox: Return To Sandbox Menu
 
-Militancy takes a few clicks to change at higher values.
-
 @raiserbstrength
 go-to: editparamilitary
 on-arrival: {!
