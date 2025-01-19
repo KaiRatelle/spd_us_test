@@ -11,9 +11,9 @@ go-to: sandbox_menu
 - @add10resources: Add 10 Resources
 - @add20resources: Add 20 Resources
 - @add100resources: Add 100 Resources
-- @subract10resources: Subtract 10 Resources
-- @subract20resources: Subtract 20 Resources
-- @subract100resources: Subtract 100 Resources
+- @subtract10resources: Subtract 10 Resources
+- @subtract20resources: Subtract 20 Resources
+- @subtract100resources: Subtract 100 Resources
 
 @add10resources
 go-to: sandbox_menu
