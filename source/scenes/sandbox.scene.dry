@@ -8,6 +8,8 @@ go-to: sandbox_menu
 
 @sandbox_menu
 
+- @disable_end: Disable End In 1934
+- @enable_end: Enable End In 1934
 - @editresources: Edit Resources
 - @editbudget: Edit Budget
 - @editrelations: Edit Party Relations
@@ -21,6 +23,20 @@ go-to: sandbox_menu
 - @editironfront: Edit Iron Front
 - @editparamilitary: Edit Paramilitary Groups
 - @editreichswehr: Edit Reichswehr and Police
+
+@disable_end
+view-if: end_disabled != 1
+on-arrival: end_disabled = 1
+go-to: sandbox_menu
+
+The end date has been disabled.
+
+@enable_end
+view-if: end_disabled = 1
+on-arrival: end_disabled = 0
+go-to: sandbox_menu
+
+The end date has been enabled.
 
 @editresources
 
