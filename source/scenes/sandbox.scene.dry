@@ -11,6 +11,7 @@ go-to: sandbox_menu
 - @editresources: Edit Resources
 - @editbudget: Edit Budget
 - @editrelations: Edit Party Relations
+- @miscparty: Miscellaneous Party Options
 - @editleft: Edit Left Faction Of SPD
 - @editcenter: Edit Center Faction of SPD
 - @editlabor: Edit Labor Faction of SPD
@@ -1011,3 +1012,67 @@ Q.interior_police_loyalty -= 0.2;
 !}
 
 Lowered Interior Police loyalty.
+
+@miscparty
+
+- @allow_banning: Allow Banning Unconstitutional Parties
+- @ban_kpd: Ban KPD
+- @unban_kpd: Unban KPD
+- @ban_nsdap: Ban NSDAP
+- @unban_nsdap: Unban NSDAP
+- @form_sapd: Form SAPD (Requires High Internal Dissent)
+- @returnsandbox: Return To Sandbox Menu
+
+@allow_banning
+view-if: constitutional_protection == 0
+go-to: miscparty
+on-arrival: {!
+Q.constitutional_protection = 1;
+!}
+
+Allowed banning unconstitutional parties.
+
+@ban_kpd
+go-to: miscparty
+view-if: kpd_banned == 0
+on-arrival: {!
+Q.kpd_banned = 1;
+!}
+
+Banned the KPD.
+
+@unban_kpd
+go-to: miscparty
+view-if: kpd_banned != 0
+on-arrival: {!
+Q.kpd_banned = 0;
+!}
+
+Unbanned the KPD.
+
+@ban_nsdap
+go-to: miscparty
+view-if: nsdap_banned == 0
+on-arrival: {!
+Q.nsdap_banned = 1;
+!}
+
+Banned the NSDAP.
+
+@unban_nsdap
+go-to: miscparty
+view-if: nsdap_banned != 0
+on-arrival: {!
+Q.nsdap_banned = 0;
+!}
+
+Unbanned the NSDAP.
+
+@form_sapd
+go-to: miscparty
+view-if: sapd_formed == 0
+on-arrival: {!
+Q.sapd_formed = 1;
+!}
+
+Formed the SAPD.
