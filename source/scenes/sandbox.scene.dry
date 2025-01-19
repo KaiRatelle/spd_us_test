@@ -94,7 +94,7 @@ Q.dissent_percent -= 5;
 
 Reduced party dissent by 5.
 
-:removedissent
+@removedissent
 go-to: sandbox_menu
 on-arrival: {!
 Q.dissent = 0;
