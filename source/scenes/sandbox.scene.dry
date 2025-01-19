@@ -949,7 +949,7 @@ Q.reichswehr_loyalty -= 0.2;
 Lowered Reichswehr loyalty.
 
 @raiseppstrength
-go-to: editprussian_police
+go-to: editreichswehr
 on-arrival: {!
 Q.prussian_police_strength += 25;
 !}
@@ -957,7 +957,7 @@ Q.prussian_police_strength += 25;
 Raised Prussian Police strength by 25,000.
 
 @lowerppstrength
-go-to: editprussian_police
+go-to: editreichswehr
 on-arrival: {!
 Q.prussian_police_strength -= 25;
 !}
@@ -965,7 +965,7 @@ Q.prussian_police_strength -= 25;
 Lowered Prussian Police strength by 25,000.
 
 @raisepployalty
-go-to: editprussian_police
+go-to: editreichswehr
 on-arrival: {!
 Q.prussian_police_loyalty += 0.2;
 !}
@@ -973,7 +973,7 @@ Q.prussian_police_loyalty += 0.2;
 Raised Prussian Police loyalty.
 
 @lowerpployalty
-go-to: editprussian_police
+go-to: editreichswehr
 on-arrival: {!
 Q.prussian_police_loyalty -= 0.2;
 !}
@@ -981,7 +981,7 @@ Q.prussian_police_loyalty -= 0.2;
 Lowered Prussian Police loyalty.
 
 @raiseipstrength
-go-to: editinterior_police
+go-to: editreichswehr
 on-arrival: {!
 Q.interior_police_strength += 25;
 !}
@@ -989,7 +989,7 @@ Q.interior_police_strength += 25;
 Raised Interior Police strength by 25,000.
 
 @loweripstrength
-go-to: editinterior_police
+go-to: editreichswehr
 on-arrival: {!
 Q.interior_police_strength -= 25;
 !}
@@ -997,7 +997,7 @@ Q.interior_police_strength -= 25;
 Lowered Interior Police strength by 25,000.
 
 @raiseiployalty
-go-to: editinterior_police
+go-to: editreichswehr
 on-arrival: {!
 Q.interior_police_loyalty += 0.2;
 !}
@@ -1005,7 +1005,7 @@ Q.interior_police_loyalty += 0.2;
 Raised Interior Police loyalty.
 
 @loweriployalty
-go-to: editinterior_police
+go-to: editreichswehr
 on-arrival: {!
 Q.interior_police_loyalty -= 0.2;
 !}
