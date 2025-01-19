@@ -3,7 +3,6 @@ new-page: true
 is-special: true
 is-hand: true
 go-to: sandbox_menu
-// If you are trying to add this to another mod, make sure to take the sandbox button from out/html/index.html and the sandbox button function from out/html/game.js
 
 = Sandbox Menu
 
