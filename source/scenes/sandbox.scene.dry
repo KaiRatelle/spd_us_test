@@ -3,10 +3,9 @@ new-page: true
 is-special: true
 is-hand: true
 go-to: sandbox_menu
+// If you are trying to add this to another mod, make sure to take the sandbox button from out/html/index.html and the sandbox button function from out/html/game.js
 
 = Sandbox Menu
-
-//If you are trying to add this to another mod, make sure to take the sandbox button from out/html/index.html and the sandbox button function from out/html/game.js
 
 @sandbox_menu
 
@@ -21,6 +20,7 @@ go-to: sandbox_menu
 - @editlabor: Edit Labor Faction of SPD
 - @editreformist: Edit Reformist Faction of SPD
 - @editneorevisionist: Edit Neorevisionist Faction of SPD
+- @editironfront: Edit Iron Front
 
 @add10resources
 go-to: sandbox_menu
@@ -460,3 +460,36 @@ Removed all neorevisionist strength.
 
 @returnsandbox
 go-to: sandbox_menu
+
+@editironfront
+
+- @formironfront: Form The Iron Front
+- @raiseurgency: Raise Urgency Against Nazis
+- @lowerurgency: Lower Urgency Against Nazis
+- @returnsandbox: Return To Sandbox Menu
+
+@formironfront
+go-to: editironfront
+view-if: iron_front_formed = 0
+on-arrival: {!
+Q.iron_front_formed = 1;
+!}
+achievement: eiserne_front
+
+Iron Front has been formed.
+
+@raiseurgency
+go-to: editironfront
+on-arrival: {!
+nazi_urgency += 1;
+!}
+
+Raised nazi urgency.
+
+@lowerurgency
+go-to: editironfront
+on-arrival: {!
+nazi_urgency -= 1;
+!}
+
+Lowered nazi urgency.
