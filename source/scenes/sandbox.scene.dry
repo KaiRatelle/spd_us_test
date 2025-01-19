@@ -389,7 +389,7 @@ Removed all reformist strength.
 
 @discoverneorevisionism
 go-to: editneorevisionist
-view-if: Q.neorevisionism == 0;
+view-if: Q.neorevisionism == 0
 on-arrival: {!
 Q.neorevisionism = 1;
 !}
