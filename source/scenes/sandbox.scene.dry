@@ -20,7 +20,7 @@ go-to: sandbox_menu
 - @removeleftdissent: Remove All Left Dissent
 - @add5leftstrength: Add 5 Left Strength
 - @100leftstrength: Maximum Left Strength
-- @subract5leftstrength: Remove 5 Left Strength
+- @subtract5leftstrength: Remove 5 Left Strength
 - @removeleftstrength: Remove Left Strength
 
 @add10resources
