@@ -64,7 +64,7 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 @sandbox
 on-arrival: {!
 !}
-Placeholder Text
+#Placeholder Text
 
 # = Public Opinion
 
