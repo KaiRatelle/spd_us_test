@@ -15,6 +15,10 @@ go-to: sandbox_menu
 - @subtract20resources: Subtract 20 Resources
 - @subtract100resources: Subtract 100 Resources
 - @editleft: Edit Left Faction Of SPD
+- @editcenter: Edit Center Faction of SPD
+- @editlabor: Edit Labor Faction of SPD
+- @editreformist: Edit Reformist Faction of SPD
+- @editneorevisionist: Edit Neorevisionist Faction of SPD
 
 @add10resources
 go-to: sandbox_menu
@@ -139,6 +143,310 @@ Q.left_strength = 0;
 !}
 
 Removed all left strength.
+
+@editcenter
+
+- @add5centerdissent: Add 5 Center Dissent
+- @100centerdissent: Maximum Center Dissent
+- @subtract5centerdissent: Remove 5 Center Dissent
+- @removecenterdissent: Remove All Center Dissent
+- @add5centerstrength: Add 5 Center Strength
+- @100centerstrength: Maximum Center Strength
+- @subtract5centerstrength: Remove 5 Center Strength
+- @removecenterstrength: Remove Center Strength
+- @returnsandbox: Return To Sandbox Menu
+
+@add5centerdissent
+go-to: editcenter
+on-arrival: {!
+Q.center_dissent += 5;
+!}
+
+Added 5 center dissent.
+
+@100centerdissent
+go-to: editcenter
+on-arrival: {!
+Q.center_dissent = 100;
+!}
+
+Maximised center dissent.
+
+@subtract5centerdissent
+go-to: editcenter
+on-arrival: {!
+Q.center_dissent -= 5;
+!}
+
+Reduced center dissent by 5.
+
+@removecenterdissent
+go-to: editcenter
+on-arrival: {!
+Q.center_dissent = 0;
+!}
+
+Removed all center dissent.
+
+@add5centerstrength
+go-to: editcenter
+on-arrival: {!
+Q.center_strength += 5;
+!}
+
+Added 5 center strength.
+
+@100centerstrength
+go-to: editcenter
+on-arrival: {!
+Q.center_strength = 100;
+!}
+
+Maximised center strength.
+
+@subtract5centerstrength
+go-to: editcenter
+on-arrival: {!
+Q.center_strength -= 5;
+!}
+
+Reduced center strength by 5.
+
+@removecenterstrength
+go-to: editcenter
+on-arrival: {!
+Q.center_strength = 0;
+!}
+
+Removed all center strength.
+
+@editlabor
+
+- @add5labordissent: Add 5 Labor Dissent
+- @100labordissent: Maximum Labor Dissent
+- @subtract5labordissent: Remove 5 Labor Dissent
+- @removelabordissent: Remove All Labor Dissent
+- @add5laborstrength: Add 5 Labor Strength
+- @100laborstrength: Maximum Labor Strength
+- @subtract5laborstrength: Remove 5 Labor Strength
+- @removelaborstrength: Remove Labor Strength
+- @returnsandbox: Return To Sandbox Menu
+
+@add5labordissent
+go-to: editlabor
+on-arrival: {!
+Q.labor_dissent += 5;
+!}
+
+Added 5 labor dissent.
+
+@100labordissent
+go-to: editlabor
+on-arrival: {!
+Q.labor_dissent = 100;
+!}
+
+Maximised labor dissent.
+
+@subtract5labordissent
+go-to: editlabor
+on-arrival: {!
+Q.labor_dissent -= 5;
+!}
+
+Reduced labor dissent by 5.
+
+@removelabordissent
+go-to: editlabor
+on-arrival: {!
+Q.labor_dissent = 0;
+!}
+
+Removed all labor dissent.
+
+@add5laborstrength
+go-to: editlabor
+on-arrival: {!
+Q.labor_strength += 5;
+!}
+
+Added 5 labor strength.
+
+@100laborstrength
+go-to: editlabor
+on-arrival: {!
+Q.labor_strength = 100;
+!}
+
+Maximised labor strength.
+
+@subtract5laborstrength
+go-to: editlabor
+on-arrival: {!
+Q.labor_strength -= 5;
+!}
+
+Reduced labor strength by 5.
+
+@removelaborstrength
+go-to: editlabor
+on-arrival: {!
+Q.labor_strength = 0;
+!}
+
+Removed all labor strength.
+
+@editreformist
+
+- @add5reformistdissent: Add 5 Reformist Dissent
+- @100reformistdissent: Maximum Reformist Dissent
+- @subtract5reformistdissent: Remove 5 Reformist Dissent
+- @removereformistdissent: Remove All Reformist Dissent
+- @add5reformiststrength: Add 5 Reformist Strength
+- @100reformiststrength: Maximum Reformist Strength
+- @subtract5reformiststrength: Remove 5 Reformist Strength
+- @removereformiststrength: Remove Reformist Strength
+- @returnsandbox: Return To Sandbox Menu
+
+@add5reformistdissent
+go-to: editreformist
+on-arrival: {!
+Q.reformist_dissent += 5;
+!}
+
+Added 5 reformist dissent.
+
+@100reformistdissent
+go-to: editreformist
+on-arrival: {!
+Q.reformist_dissent = 100;
+!}
+
+Maximised reformist dissent.
+
+@subtract5reformistdissent
+go-to: editreformist
+on-arrival: {!
+Q.reformist_dissent -= 5;
+!}
+
+Reduced reformist dissent by 5.
+
+@removereformistdissent
+go-to: editreformist
+on-arrival: {!
+Q.reformist_dissent = 0;
+!}
+
+Removed all reformist dissent.
+
+@add5reformiststrength
+go-to: editreformist
+on-arrival: {!
+Q.reformist_strength += 5;
+!}
+
+Added 5 reformist strength.
+
+@100reformiststrength
+go-to: editreformist
+on-arrival: {!
+Q.reformist_strength = 100;
+!}
+
+Maximised reformist strength.
+
+@subtract5reformiststrength
+go-to: editreformist
+on-arrival: {!
+Q.reformist_strength -= 5;
+!}
+
+Reduced reformist strength by 5.
+
+@removereformiststrength
+go-to: editreformist
+on-arrival: {!
+Q.reformist_strength = 0;
+!}
+
+Removed all reformist strength.
+
+@editneorevisionist
+
+- @add5neorevisionistdissent: Add 5 Neorevisionist Dissent
+- @100neorevisionistdissent: Maximum Neorevisionist Dissent
+- @subtract5neorevisionistdissent: Remove 5 Neorevisionist Dissent
+- @removeneorevisionistdissent: Remove All Neorevisionist Dissent
+- @add5neorevisioniststrength: Add 5 Neorevisionist Strength
+- @100neorevisioniststrength: Maximum Neorevisionist Strength
+- @subtract5neorevisioniststrength: Remove 5 Neorevisionist Strength
+- @removeneorevisioniststrength: Remove Neorevisionist Strength
+- @returnsandbox: Return To Sandbox Menu
+
+@add5neorevisionistdissent
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_dissent += 5;
+!}
+
+Added 5 neorevisionist dissent.
+
+@100neorevisionistdissent
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_dissent = 100;
+!}
+
+Maximised neorevisionist dissent.
+
+@subtract5neorevisionistdissent
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_dissent -= 5;
+!}
+
+Reduced neorevisionist dissent by 5.
+
+@removeneorevisionistdissent
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_dissent = 0;
+!}
+
+Removed all neorevisionist dissent.
+
+@add5neorevisioniststrength
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_strength += 5;
+!}
+
+Added 5 neorevisionist strength.
+
+@100neorevisioniststrength
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_strength = 100;
+!}
+
+Maximised neorevisionist strength.
+
+@subtract5neorevisioniststrength
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_strength -= 5;
+!}
+
+Reduced neorevisionist strength by 5.
+
+@removeneorevisioniststrength
+go-to: editneorevisionist
+on-arrival: {!
+Q.neorevisionist_strength = 0;
+!}
+
+Removed all neorevisionist strength.
 
 @returnsandbox
 go-to: sandbox_menu
