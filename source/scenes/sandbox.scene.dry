@@ -17,6 +17,7 @@ go-to: sandbox_menu
 - @editreformist: Edit Reformist Faction of SPD
 - @editneorevisionist: Edit Neorevisionist Faction of SPD
 - @editironfront: Edit Iron Front
+- @editparamilitary: Edit Paramilitary Groups and Reichswehr
 
 @editresources
 
@@ -144,10 +145,10 @@ Removed 100 budget from the country's stockpile. This doesn't go to the homeless
 - @decreaseddprel: Decrease Relations With The DDP/DStP
 - @increasedvprel: Increase Relations With The DVP
 - @decreasedvprel: Decrease Relations With The DVP
-- @increasednvprel: Increase Relations With The DNVP
-- @decreasednvprel: Decrease Relations With The DNVP
-- @increasensdaprel: Increase Relations With The NSDAP
-- @decreasensdaprel: Decrease Relations With The NSDAP
+- @increasednvprel: Increase Relations With The DNVP (Doesn't Work)
+- @decreasednvprel: Decrease Relations With The DNVP (Doesn't Work)
+- @increasensdaprel: Increase Relations With The NSDAP (Doesn't Work)
+- @decreasensdaprel: Decrease Relations With The NSDAP (Doesn't Work)
 - @returnsandbox: Return To Sandbox Menu
 
 @increasecenterrel
@@ -669,3 +670,233 @@ nazi_urgency -= 1;
 !}
 
 Lowered nazi urgency.
+
+@editparamilitary
+
+- @raiserbstrength: Raise Reichsbanner Strength
+- @lowerrbstrength: Lower Reichsbanner Strength
+- @raiserbmilitancy: Raise Reichsbanner Militancy
+- @lowerrbmilitancy: Lower Reichsbanner Militancy
+- @banrb: Ban Reichsbanner
+- @unbanrb: Unban Reichsbanner
+- @raiseshstrength: Raise Stahlhelm Strength
+- @lowershstrength: Lower Stahlhelm Strength
+- @raiseshmilitancy: Raise Stahlhelm Militancy
+- @lowershmilitancy: Lower Stahlhelm Militancy
+- @bansh: Ban Stahlhelm
+- @unbansh: Unban Stahlhelm
+- @raisesastrength: Raise SA Strength
+- @lowersastrength: Lower SA Strength
+- @raisesamilitancy: Raise SA Militancy
+- @lowersamilitancy: Lower SA Militancy
+- @bansa: Ban SA
+- @unbansa: Unban SA
+- @raiserfbstrength: Raise RFB Strength
+- @lowerrfbstrength: Lower RFB Strength
+- @raiserfbmilitancy: Raise RFB Militancy
+- @lowerrfbmilitancy: Lower RFB Militancy
+- @banrfb: Ban RFB
+- @unbanrfb: Unban RFB
+- @returnsandbox: Return To Sandbox Menu
+
+Militancy takes a few clicks to change at higher values.
+
+@raiserbstrength
+go-to: editparamilitary
+on-arrival: {!
+Q.rb_strength += 200;
+!}
+
+Raised Reichsbanner strength by 200.
+
+@lowerrbstrength
+go-to: editparamilitary
+on-arrival: {!
+Q.rb_strength -= 200;
+!}
+
+Lowered Reichsbanner strength by 200.
+
+@raiserbmilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.rb_militancy += 0.15;
+!}
+
+Raised Reichsbanner militancy.
+
+@lowerrbmilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.rb_militancy -= 0.15;
+!}
+
+Lowered Reichsbanner militancy.
+
+@banrb
+go-to: editparamilitary
+view-if: rb_banned == 0
+on-arrival: {!
+Q.rb_banned = 1;
+!}
+
+Banned the Reichsbanner.
+
+@unbanrb
+go-to: editparamilitary
+view-if: rb_banned != 0
+on-arrival: {!
+Q.rb_banned = 0;
+!}
+
+Unbanned the Reichsbanner.
+
+@raiseshstrength
+go-to: editparamilitary
+on-arrival: {!
+Q.sh_strength += 200;
+!}
+
+Raised Stahlhelm strength by 200.
+
+@lowershstrength
+go-to: editparamilitary
+on-arrival: {!
+Q.sh_strength -= 200;
+!}
+
+Lowered Stahlhelm strength by 200.
+
+@raiseshmilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.sh_militancy += 0.15;
+!}
+
+Raised Stahlhelm militancy.
+
+@lowershmilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.sh_militancy -= 0.15;
+!}
+
+Lowered Stahlhelm militancy.
+
+@bansh
+go-to: editparamilitary
+view-if: sh_banned == 0
+on-arrival: {!
+Q.sh_banned = 1;
+!}
+
+Banned the Stahlhelm.
+
+@unbansh
+go-to: editparamilitary
+view-if: sh_banned != 0
+on-arrival: {!
+Q.sh_banned = 0;
+!}
+
+Unbanned the Stahlhelm.
+
+@raisesastrength
+go-to: editparamilitary
+on-arrival: {!
+Q.sa_strength += 200;
+!}
+
+Raised SA strength by 200.
+
+@lowersastrength
+go-to: editparamilitary
+on-arrival: {!
+Q.sa_strength -= 200;
+!}
+
+Lowered SA strength by 200.
+
+@raisesamilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.sa_militancy += 0.15;
+!}
+
+Raised SA militancy.
+
+@lowersamilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.sa_militancy -= 0.15;
+!}
+
+Lowered SA militancy.
+
+@bansa
+go-to: editparamilitary
+view-if: sa_banned == 0
+on-arrival: {!
+Q.sa_banned = 1;
+!}
+
+Banned the SA.
+
+@unbansa
+go-to: editparamilitary
+view-if: sa_banned != 0
+on-arrival: {!
+Q.sa_banned = 0;
+!}
+
+Unbanned the SA.
+
+@raiserfbstrength
+go-to: editparamilitary
+on-arrival: {!
+Q.rfb_strength += 200;
+!}
+
+Raised RFB strength by 200.
+
+@lowerrfbstrength
+go-to: editparamilitary
+on-arrival: {!
+Q.rfb_strength -= 200;
+!}
+
+Lowered RFB strength by 200.
+
+@raiserfbmilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.rfb_militancy += 0.15;
+!}
+
+Raised RFB militancy.
+
+@lowerrfbmilitancy
+go-to: editparamilitary
+on-arrival: {!
+Q.rfb_militancy -= 0.15;
+!}
+
+Lowered RFB militancy.
+
+@banrfb
+go-to: editparamilitary
+view-if: rfb_banned == 0
+on-arrival: {!
+Q.rfb_banned = 1;
+!}
+
+Banned the RFB.
+
+@unbanrfb
+go-to: editparamilitary
+view-if: rfb_banned != 0
+on-arrival: {!
+Q.rfb_banned = 0;
+!}
+
+Unbanned the RFB.
