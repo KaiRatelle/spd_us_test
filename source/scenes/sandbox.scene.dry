@@ -1034,7 +1034,7 @@ Allowed banning unconstitutional parties.
 
 @ban_kpd
 go-to: miscparty
-view-if: kpd_banned == 0
+view-if: kpd_banned == 0 and constitutional_protection == 1
 on-arrival: {!
 Q.kpd_banned = 1;
 !}
@@ -1043,7 +1043,7 @@ Banned the KPD.
 
 @unban_kpd
 go-to: miscparty
-view-if: kpd_banned != 0
+view-if: kpd_banned != 0 and constitutional_protection == 1
 on-arrival: {!
 Q.kpd_banned = 0;
 !}
@@ -1052,7 +1052,7 @@ Unbanned the KPD.
 
 @ban_nsdap
 go-to: miscparty
-view-if: nsdap_banned == 0
+view-if: nsdap_banned == 0 and constitutional_protection == 1
 on-arrival: {!
 Q.nsdap_banned = 1;
 !}
@@ -1061,7 +1061,7 @@ Banned the NSDAP.
 
 @unban_nsdap
 go-to: miscparty
-view-if: nsdap_banned != 0
+view-if: nsdap_banned != 0 and constitutional_protection == 1
 on-arrival: {!
 Q.nsdap_banned = 0;
 !}
