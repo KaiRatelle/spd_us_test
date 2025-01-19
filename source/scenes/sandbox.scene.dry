@@ -20,6 +20,7 @@ go-to: sandbox_menu
 on-arrival: {!
 Q.resources += 10;
 !}
+
 Added 10 resources to the party's stockpile.
 
 @add20resources
@@ -27,6 +28,7 @@ go-to: sandbox_menu
 on-arrival: {!
 Q.resources += 20;
 !}
+
 Added 20 resources to the party's stockpile.
 
 @add100resources
@@ -34,6 +36,7 @@ go-to: sandbox_menu
 on-arrival: {!
 Q.resources += 100;
 !}
+
 Added 100 resources to the party's stockpile, stop being greedy.
 
 @subtract10resources
@@ -41,6 +44,7 @@ go-to: sandbox_menu
 on-arrival: {!
 Q.resources -= 10;
 !}
+
 Removed 10 resources from the party's stockpile.
 
 @subtract20resources
@@ -48,6 +52,7 @@ go-to: sandbox_menu
 on-arrival: {!
 Q.resources -= 20;
 !}
+
 Removed 20 resources from the party's stockpile.
 
 @subtract100resources
@@ -55,4 +60,5 @@ go-to: sandbox_menu
 on-arrival: {!
 Q.resources -= 100;
 !}
+
 Removed 100 resources from the party's stockpile. This doesn't go to the homeless or anything, why would you do this?
