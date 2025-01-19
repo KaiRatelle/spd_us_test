@@ -19,7 +19,7 @@ go-to: sandbox_menu
 - @subtract5leftdissent: Remove 5 Left Dissent
 - @removeleftdissent: Remove All Left Dissent
 - @add5leftstrength: Add 5 Left Strength
-- @100leftstength: Maximum Left Strength
+- @100leftstrength: Maximum Left Strength
 - @subract5leftstrength: Remove 5 Left Strength
 - @removeleftstrength: Remove Left Strength
 
