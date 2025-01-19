@@ -17,7 +17,8 @@ go-to: sandbox_menu
 - @editreformist: Edit Reformist Faction of SPD
 - @editneorevisionist: Edit Neorevisionist Faction of SPD
 - @editironfront: Edit Iron Front
-- @editparamilitary: Edit Paramilitary Groups and Reichswehr
+- @editparamilitary: Edit Paramilitary Groups
+- @editreichswehr: Edit Reichswehr and Police
 
 @editresources
 
@@ -898,3 +899,115 @@ Q.rfb_banned = 0;
 !}
 
 Unbanned the RFB.
+
+@editreichswehr
+
+- @raiserwstrength: Raise Reichswehr Strength By 25,000
+- @lowerrwstrength: Lower Reichswehr Strength
+- @raiserwloyalty: Raise Reichswehr Loyalty
+- @lowerrwloyalty: Lower Reichswehr Loyalty
+- @raiseppstrength: Raise Prussian Police Strength By 25,000
+- @lowerppstrength: Lower Prussian Police Strength
+- @raisepployalty: Raise Prussian Police Loyalty
+- @lowerpployalty: Lower Prussian Police Loyalty
+- @raiseipstrength: Raise Interior Police Strength By 25,000
+- @loweripstrength: Lower Interior Police Strength
+- @raiseiployalty: Raise Interior Police Loyalty
+- @loweriployalty: Lower Interior Police Loyalty
+- @returnsandbox: Return To Sandbox Menu
+
+@raiserwstrength
+go-to: editreichswehr
+on-arrival: {!
+Q.reichswehr_strength += 25;
+!}
+
+Raised Reichswehr strength by 25,000.
+
+@lowerrwstrength
+go-to: editreichswehr
+on-arrival: {!
+Q.reichswehr_strength -= 25;
+!}
+
+Lowered Reichswehr strength by 25,000.
+
+@raiserwloyalty
+go-to: editreichswehr
+on-arrival: {!
+Q.reichswehr_loyalty += 0.2;
+!}
+
+Raised Reichswehr loyalty.
+
+@lowerrwloyalty
+go-to: editreichswehr
+on-arrival: {!
+Q.reichswehr_loyalty -= 0.2;
+!}
+
+Lowered Reichswehr loyalty.
+
+@raiseppstrength
+go-to: editprussian_police
+on-arrival: {!
+Q.prussian_police_strength += 25;
+!}
+
+Raised Prussian Police strength by 25,000.
+
+@lowerppstrength
+go-to: editprussian_police
+on-arrival: {!
+Q.prussian_police_strength -= 25;
+!}
+
+Lowered Prussian Police strength by 25,000.
+
+@raisepployalty
+go-to: editprussian_police
+on-arrival: {!
+Q.prussian_police_loyalty += 0.2;
+!}
+
+Raised Prussian Police loyalty.
+
+@lowerpployalty
+go-to: editprussian_police
+on-arrival: {!
+Q.prussian_police_loyalty -= 0.2;
+!}
+
+Lowered Prussian Police loyalty.
+
+@raiseipstrength
+go-to: editinterior_police
+on-arrival: {!
+Q.interior_police_strength += 25;
+!}
+
+Raised Interior Police strength by 25,000.
+
+@loweripstrength
+go-to: editinterior_police
+on-arrival: {!
+Q.interior_police_strength -= 25;
+!}
+
+Lowered Interior Police strength by 25,000.
+
+@raiseiployalty
+go-to: editinterior_police
+on-arrival: {!
+Q.interior_police_loyalty += 0.2;
+!}
+
+Raised Interior Police loyalty.
+
+@loweriployalty
+go-to: editinterior_police
+on-arrival: {!
+Q.interior_police_loyalty -= 0.2;
+!}
+
+Lowered Interior Police loyalty.
