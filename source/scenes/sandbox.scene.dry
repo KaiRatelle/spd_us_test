@@ -10,6 +10,7 @@ go-to: sandbox_menu
 
 - @editresources: Edit Resources
 - @editbudget: Edit Budget
+- @editrelations: Edit Party Relations
 - @editleft: Edit Left Faction Of SPD
 - @editcenter: Edit Center Faction of SPD
 - @editlabor: Edit Labor Faction of SPD
@@ -132,6 +133,118 @@ Q.budget -= 100;
 !}
 
 Removed 100 budget from the country's stockpile. This doesn't go to the homeless or anything, why would you do this?
+
+@editrelations
+
+- @increasecenterrel: Increase Relations With The Center Party
+- @decreasecenterrel: Decrease Relations With The Center Party
+- @increasekpdrel: Increase Relations With The KPD
+- @decreasekpdrel: Decrease Relations With The KPD
+- @increaseddprel: Increase Relations With The DDP/DStP
+- @decreaseddprel: Decrease Relations With The DDP/DStP
+- @increasedvprel: Increase Relations With The DVP
+- @decreasedvprel: Decrease Relations With The DVP
+- @increasednvprel: Increase Relations With The DNVP
+- @decreasednvprel: Decrease Relations With The DNVP
+- @increasensdaprel: Increase Relations With The NSDAP
+- @decreasensdaprel: Decrease Relations With The NSDAP
+- @returnsandbox: Return To Sandbox Menu
+
+@increasecenterrel
+go-to: editrelations
+on-arrival: {!
+Q.z_relation += 15;
+!}
+
+Increased relations with the Center Party.
+
+@decreasecenterrel
+go-to: editrelations
+on-arrival: {!
+Q.z_relation -= 15;
+!}
+
+Decreased relations with the Center Party.
+
+@increasekpdrel
+go-to: editrelations
+on-arrival: {!
+Q.kpd_relation += 15;
+!}
+
+Increased relations with the KPD.
+
+@decreasekpdrel
+go-to: editrelations
+on-arrival: {!
+Q.kpd_relation -= 15;
+!}
+
+Decreased relations with the KPD.
+
+@increaseddprel
+go-to: editrelations
+on-arrival: {!
+Q.ddp_relation += 15;
+!}
+
+Increased relations with the DDP.
+
+@decreaseddprel
+go-to: editrelations
+on-arrival: {!
+Q.ddp_relation -= 15;
+!}
+
+Decreased relations with the DDP.
+
+@increasedvprel
+go-to: editrelations
+on-arrival: {!
+Q.dvp_relation += 15;
+!}
+
+Increased relations with the DVP.
+
+@decreasedvprel
+go-to: editrelations
+on-arrival: {!
+Q.dvp_relation -= 15;
+!}
+
+Decreased relations with the DVP.
+
+@increasednvprel
+go-to: editrelations
+on-arrival: {!
+Q.dnvp_relation += 15;
+!}
+
+Increased relations with the DNVP.
+
+@decreasednvprel
+go-to: editrelations
+on-arrival: {!
+Q.dnvp_relation -= 15;
+!}
+
+Decreased relations with the DNVP.
+
+@increasensdaprel
+go-to: editrelations
+on-arrival: {!
+Q.nsdap_relation += 15;
+!}
+
+Increased relations with the NSDAP.
+
+@decreasensdaprel
+go-to: editrelations
+on-arrival: {!
+Q.nsdap_relation -= 15;
+!}
+
+Decreased relations with the NSDAP.
 
 @editleft
 

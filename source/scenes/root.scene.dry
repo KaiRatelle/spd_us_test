@@ -11,7 +11,7 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start: Start game
-- @election_simulation: Election simulation
+- @election_simulation: Election Simulation
 - @credits: Credits
 - @game_over.achievements
 
@@ -33,7 +33,7 @@ Q.historical_mode = 0;
 Q.old_demographics = 0;
 
 // party resources
-Q.resources = 100;
+Q.resources = 2;
 // party dues
 Q.dues = 2;
 
@@ -154,7 +154,7 @@ Q.prussian_police_loyalty = 0.5;
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
 Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 1;
+Q.reichswehr_loyalty = 0.2;
 
 // The state of the country
 
@@ -187,7 +187,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 100;
+Q.budget = 5;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
@@ -574,18 +574,18 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_easy: Begin (High Relations (Excluding NSDAP and DNVP))
-- @1928_main: Begin (Normal Relations)
-- @1928_hard: Begin (Terrible Relations)
+- @1928_easy: Begin (Easy Difficulty)
+- @1928_main: Begin (Normal Difficulty)
+- @1928_hard: Begin (Hard Difficulty)
 - @1928_historical: Begin (Historical Mode)
 - @settings: Settings
 
 @1928_easy
-on-arrival: difficulty = -1; dues = 29; rb_strength = 2000; kpd_relation = 90; z_relation = 90; dvp_relation = 90; ddp_relation = 90;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 200; dues = 29; rb_strength = 2000; z_relation = 0; kpd_relation = 0; dvp_relation = 0; ddp_relation = 0; DNVP_relation = 0;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31;
 go-to: 1928_main
 
 @1928_historical
@@ -593,7 +593,8 @@ subtitle: Saving, loading, and polls will be disabled. [? if not achievement_gam
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
-Q.dues = 29;
+Q.resources = 2;
+Q.dues = 1;
 Q.rb_strength = 2000;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
@@ -602,6 +603,7 @@ Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpd_relation = 16;
 Q.dvp_relation = 31;
+Q.budget = 2;
 this.state.disableSaves = true;
 !}
 go-to: 1928_main
@@ -631,9 +633,9 @@ The end date has been disabled.
 
 @menu
 
-- @1928_easy: Begin (High Relations (Excluding NSDAP and DNVP))
-- @1928_main: Begin (Normal Relations)
-- @1928_hard: Begin (Terrible Relations)
+- @1928_easy: Begin (Easy Difficulty)
+- @1928_main: Begin (Normal Difficulty)
+- @1928_hard: Begin (Hard Difficulty)
 - @1928_historical: Begin (Historical Mode)
 - @settings: Settings
 
@@ -644,8 +646,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality.
 
 Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
-
 
