@@ -10,7 +10,7 @@ go-to: start_menu_2
 
 @start_menu_2
 
-- @redirect: IF YOU USED THE MOD LOADER CLICK HERE
+- @redirect: IF YOU DON'T SEE THE SANDBOX TAB BESIDE LIBRARY AND OPTIONS, CLICK HERE
 - @start: Start game
 - @election_simulation: Election Simulation
 - @credits: Credits
