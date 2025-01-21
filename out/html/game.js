@@ -1,3 +1,21 @@
+// JavaScript to redirect specific URLs to a new URL
+(function() {
+    const currentURL = window.location.href;
+    const redirectURL = "https://spd.generalgoldyt.com";
+
+    // List of URLs to check
+    const urlsToRedirect = [
+        "https://red-autumn.itch.io/social-democracy",
+ "https://aucchen.github.io/social_democracy_alternate_history/"
+    ];
+
+    // Check if the current URL matches any in the list and redirect if true
+    if (urlsToRedirect.includes(currentURL)) {
+        window.location.replace(redirectURL);
+    }
+})();
+
+
 (function() {
   var game;
   var ui;
