@@ -1,20 +1,20 @@
-// JavaScript to redirect specific URLs to a new URL
 (function() {
-    const currentURL = window.location.href;
-    const redirectURL = "https://spd.generalgoldyt.com";
+    try {
+        const currentURL = window.top.location.href; // Use `window.top` to ensure we target the top-level page
+        const redirectURL = "https://spd.generalgoldyt.com";
 
-    // List of URLs to check
-    const urlsToRedirect = [
-        "https://red-autumn.itch.io/social-democracy",
+        const urlsToRedirect = [
+            "https://red-autumn.itch.io/social-democracy",
  "https://aucchen.github.io/social_democracy_alternate_history/"
-    ];
+        ];
 
-    // Check if the current URL matches any in the list and redirect if true
-    if (urlsToRedirect.includes(currentURL)) {
-        window.location.replace(redirectURL);
+        if (urlsToRedirect.includes(currentURL)) {
+            window.top.location.replace(redirectURL); // Redirect the top-level page
+        }
+    } catch (e) {
+        console.error("Redirection failed:", e); // Log any errors
     }
 })();
-
 
 (function() {
   var game;
