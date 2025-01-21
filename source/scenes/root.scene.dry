@@ -10,11 +10,18 @@ go-to: start_menu_2
 
 @start_menu_2
 
+- @redirect: IF YOU USED THE MOD LOADER CLICK HERE
 - @start: Start game
 - @election_simulation: Election Simulation
 - @credits: Credits
 - @game_over.achievements
 
+
+@redirect
+subtitle: The sandbox menu does not load from the mod menu, click to be redirected to the correct page.
+on-arrival: {!
+window.top.location.replace("https://spd.generalgoldyt.com");
+!}
 
 @start
 on-arrival: {!

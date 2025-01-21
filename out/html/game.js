@@ -1,22 +1,4 @@
 (function() {
-    try {
-        const currentURL = window.top.location.href; // Use `window.top` to ensure we target the top-level page
-        const redirectURL = "https://spd.generalgoldyt.com";
-
-        const urlsToRedirect = [
-            "https://red-autumn.itch.io/social-democracy",
- "https://aucchen.github.io/social_democracy_alternate_history/"
-        ];
-
-        if (urlsToRedirect.includes(currentURL)) {
-            window.top.location.replace(redirectURL); // Redirect the top-level page
-        }
-    } catch (e) {
-        console.error("Redirection failed:", e); // Log any errors
-    }
-})();
-
-(function() {
   var game;
   var ui;
 
