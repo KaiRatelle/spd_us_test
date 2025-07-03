@@ -21,6 +21,7 @@ go-to: start_menu_2
 subtitle: The sandbox menu does not load from the mod menu, click to be redirected to the correct page.
 on-arrival: {!
 window.top.location.replace("https://spd.sylvurr.com");
+window.enableDarkMode();
 !}
 
 @start
