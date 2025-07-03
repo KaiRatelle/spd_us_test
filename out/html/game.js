@@ -250,6 +250,7 @@
 
   window.justLoaded = true;
   window.statusTab = "status";
+  window.enableDarkMode();
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
